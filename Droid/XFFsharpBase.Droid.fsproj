@@ -97,10 +97,9 @@
   <ItemGroup>
     <Compile Include="MainActivity.fs" />
     <Compile Include="Properties\AssemblyInfo.fs" />
+    <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AboutResources.txt" />
-    <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
   </ItemGroup>
@@ -109,6 +108,7 @@
     <Folder Include="Resources\values\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
     <AndroidResource Include="Resources\drawable\icon.png" />
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />

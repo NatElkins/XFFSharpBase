@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -33,7 +33,8 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhone\Release</OutputPath>
-    <DefineConstants></DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchUseSGen>true</MtouchUseSGen>
@@ -51,7 +52,8 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
-    <DefineConstants></DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchUseSGen>true</MtouchUseSGen>
@@ -84,6 +86,21 @@
     <MtouchTlsProvider>Default</MtouchTlsProvider>
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.FSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+    <Compile Include="AppDelegate.fs" />
+  </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
@@ -101,28 +118,9 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.2.3.3.180\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\XFFsharpBase\XFFsharpBase.fsproj">
       <Project>{94805720-8B60-49E4-AE52-CF3F5E041023}</Project>
       <Name>XFFsharpBase</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Contents.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <InterfaceDefinition Include="LaunchScreen.storyboard" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Info.plist" />
-    <None Include="Entitlements.plist" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="AppDelegate.fs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.FSharp.targets" />
-  <Import Project="..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
 </Project>
