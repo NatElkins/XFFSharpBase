@@ -1,12 +1,14 @@
 ﻿namespace XFFsharpBase
 
 open Xamarin.Forms
+open XFFsharpBase.Helpers
 
 type App() =
     inherit Application()
 
-    let stack = StackLayout(VerticalOptions = LayoutOptions.Center)
-    let label = Label(XAlign = TextAlignment.Center, Text = "Welcome to F# Xamarin.Forms!")
+    let stack =
+        StackLayout.create
+            [ Label(Text="Test 1", HorizontalOptions=LayoutOptions.Center)
+              Label(XAlign=TextAlignment.Center, Text="This is another test!a") ]
     do
-        stack.Children.Add(label)
         base.MainPage <- ContentPage(Content = stack)
