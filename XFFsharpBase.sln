@@ -2,6 +2,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{D9855410-AEFD-49CE-A153-F111F6CE5BEA}"
+	ProjectSection(SolutionItems) = preProject
+		paket.dependencies = paket.dependencies
+	EndProjectSection
+EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "XFFsharpBase", "XFFsharpBase\XFFsharpBase.fsproj", "{94805720-8B60-49E4-AE52-CF3F5E041023}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "XFFsharpBase.iOS", "iOS\XFFsharpBase.iOS.fsproj", "{2933D654-335E-4E10-BDF2-629E04A3E9F6}"

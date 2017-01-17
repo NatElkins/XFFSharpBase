@@ -18,4 +18,3 @@ type MainActivity() =
         Xamarin.Forms.Forms.Init (this, bundle)
 
         this.LoadApplication (new XFFsharpBase.App ())
-

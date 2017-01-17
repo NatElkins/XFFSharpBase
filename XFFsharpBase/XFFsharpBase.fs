@@ -9,6 +9,6 @@ type App() =
     let stack =
         StackLayout.create
             [ Label(Text="Test 1", HorizontalOptions=LayoutOptions.Center)
-              Label(XAlign=TextAlignment.Center, Text="This is another test!a") ]
+              Label(XAlign=TextAlignment.Center, Text="This is another taaest!a") ]
     do
         base.MainPage <- ContentPage(Content = stack)
